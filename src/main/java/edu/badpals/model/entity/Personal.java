@@ -1,12 +1,12 @@
 package edu.badpals.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name="personas")
+@Inheritance(strategy= InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="tipo_persona",discriminatorType=DiscriminatorType.INTEGER)
+@DiscriminatorValue(value="0")
+
 public class Personal {
     @Id
     @Column(name = "id")
@@ -21,7 +21,5 @@ public class Personal {
     private String nombre;
     @Column(name="telefono")
     private String telefono;
-
-    
 
 }
