@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-@DiscriminatorValue(value="4")
 public class Limpiador extends Personal {
     @Column(name="planta")
     private String planta;

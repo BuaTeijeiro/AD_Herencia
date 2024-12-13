@@ -4,9 +4,7 @@ import com.sun.istack.Nullable;
 import jakarta.persistence.*;
 
 @Entity
-@Inheritance(strategy= InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="tipo_persona",discriminatorType=DiscriminatorType.INTEGER)
-@DiscriminatorValue(value="0")
+@Inheritance(strategy= InheritanceType.TABLE_PER_CLASS)
 
 public class Personal {
     @Id

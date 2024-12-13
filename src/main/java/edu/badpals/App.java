@@ -27,15 +27,21 @@ public class App {
         limpiador.setId(4);
         limpiador.setPlanta("Primera");
 
+        Personal personal = new Personal();
+        personal.setId(5);
+        personal.setNombre("pepe");
+
+
         try{
             em.getTransaction().begin();
             em.persist(medico);
             em.persist(enfermero);
             em.persist(celador);
             em.persist(limpiador);
+            em.persist(personal);
             em.getTransaction().commit();
         } catch (PersistenceException e) {
-            System.out.println("Error");
+            System.out.println("Error" + e.getMessage());
         }
 
         em.close();

@@ -3,7 +3,6 @@ package edu.badpals.model.entity;
 import jakarta.persistence.*;
 
 @Entity
-@DiscriminatorValue(value="3")
 public class Celador extends Personal{
     @Column(name = "turno")
     private String turno;

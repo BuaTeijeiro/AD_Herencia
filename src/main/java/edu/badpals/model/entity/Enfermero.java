@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-@DiscriminatorValue(value="2")
 public class Enfermero extends Personal{
     @Column(name = "consulta", nullable = true)
     private String consulta;
