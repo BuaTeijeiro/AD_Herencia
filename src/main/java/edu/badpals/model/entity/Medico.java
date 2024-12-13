@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
+@DiscriminatorValue(value="1")
+@PrimaryKeyJoinColumn(name="idpersonal")
 public class Medico extends Personal {
     @Column(name = "consultaVisita")
     private String consultaVisita;

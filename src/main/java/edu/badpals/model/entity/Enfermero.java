@@ -1,11 +1,10 @@
 package edu.badpals.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@DiscriminatorValue(value="2")
+@PrimaryKeyJoinColumn(name="idpersonal")
 public class Enfermero extends Personal{
     @Column(name = "consulta", nullable = true)
     private String consulta;

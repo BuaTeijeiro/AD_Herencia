@@ -41,6 +41,7 @@ public class App {
             em.persist(personal);
             em.getTransaction().commit();
         } catch (PersistenceException e) {
+            em.getTransaction().rollback();
             System.out.println("Error" + e.getMessage());
         }
 
