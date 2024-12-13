@@ -6,17 +6,25 @@ import java.util.List;
 
 @Entity
 @DiscriminatorValue(value="1")
-public class Medico {
-
-    @Id
-    @Column(name = "id")
-    private int id;
+public class Medico extends Personal {
     @Column(name = "consultaVisita")
     private String consultaVisita;
-    @Column(name = "operaciones")
+     /*@Column(name = "operaciones")
     private List<String> operaciones;
     @Column(name = "visitas")
-    private List<String> visitas;
+    private List<String> visitas;*/
+
+    public Medico() {
+        super();
+    }
+
+    public String getConsultaVisita() {
+        return consultaVisita;
+    }
+
+    public void setConsultaVisita(String consultaVisita) {
+        this.consultaVisita = consultaVisita;
+    }
 
     // descripcion y fecha asociada a las consultas y visitas?
 }

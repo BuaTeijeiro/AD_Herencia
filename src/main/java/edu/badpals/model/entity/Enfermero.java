@@ -7,11 +7,19 @@ import jakarta.persistence.Id;
 
 @Entity
 @DiscriminatorValue(value="2")
-public class Enfermero {
-
-    @Id
-    @Column(name = "id")
-    private int id;
-    @Column(name = "consulta", nullable = false)
+public class Enfermero extends Personal{
+    @Column(name = "consulta", nullable = true)
     private String consulta;
+    /* turnos*/
+
+    public Enfermero() {
+    }
+
+    public String getConsulta() {
+        return consulta;
+    }
+
+    public void setConsulta(String consulta) {
+        this.consulta = consulta;
+    }
 }
