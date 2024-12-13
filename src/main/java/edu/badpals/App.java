@@ -13,11 +13,9 @@ public class App {
 
         Medico medico = new Medico();
         medico.setId(1);
-        medico.setConsultaVisita("Consulta médico");
 
         Enfermero enfermero = new Enfermero();
         enfermero.setId(2);
-        enfermero.setConsulta("Consulta enfermero");
 
         Celador celador = new Celador();
         celador.setId(3);

@@ -77,4 +77,6 @@ public class Personal {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+
 }
