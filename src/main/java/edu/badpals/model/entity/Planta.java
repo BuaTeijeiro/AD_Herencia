@@ -21,6 +21,9 @@ public class Planta {
     @ManyToMany(mappedBy = "lPlantas")
     private Set<Limpiador> limpiadores;
 
+    @OneToMany(mappedBy = "plantaAsignada")
+    private Set<Turno> turnos;
+
     public Planta() {
     }
 
@@ -54,5 +57,13 @@ public class Planta {
 
     public void setLimpiadores(Set<Limpiador> limpiadores) {
         this.limpiadores = limpiadores;
+    }
+
+    public Set<Turno> getTurnos() {
+        return turnos;
+    }
+
+    public void setTurnos(Set<Turno> turnos) {
+        this.turnos = turnos;
     }
 }

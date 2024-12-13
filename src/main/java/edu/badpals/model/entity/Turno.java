@@ -30,6 +30,10 @@ public class Turno {
     @ManyToMany(mappedBy = "lTurnosLimpiador")
     private Set<Limpiador> limpiadores;
 
+    @ManyToOne
+    @JoinColumn(name="plantaAsignada")
+    private Planta plantaAsignada;
+
     public Turno() {
     }
 
@@ -87,5 +91,13 @@ public class Turno {
 
     public void setLimpiadores(Set<Limpiador> limpiadores) {
         this.limpiadores = limpiadores;
+    }
+
+    public Planta getPlantaAsignada() {
+        return plantaAsignada;
+    }
+
+    public void setPlantaAsignada(Planta plantaAsignada) {
+        this.plantaAsignada = plantaAsignada;
     }
 }
